@@ -4,7 +4,7 @@ var Doctor = require('../models/doctor');
 const { authenticate, authorize } = require('../middleware/auth');
 
 
-//membatasi bahwa hanya admin yang bisa menggunakan end point pada data doctor
+//di batasi hanya admin yang dapat mengakses end point ini
 router.get('/', authenticate, authorize(['admin']), async (req, res, next) => {
     try {
         const Doctors = await Doctor.findAll();
