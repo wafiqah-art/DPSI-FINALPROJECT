@@ -1,0 +1,587 @@
+{
+	"info": {
+		"_postman_id": "65e5cc74-b2f4-4747-a6af-c8518c1250ca",
+		"name": "wafiqah",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36583903"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"admin\",\r\n    \"role\" : \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/auth/register",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE1MTAyMjQsImV4cCI6MTcyMTUxMzgyNH0.MYwErWE0Sm0qC59wx1-R_tmazCbQIWvJn6P9mA4W8DA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/users",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/auth/login",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get doctor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTg2MzksImV4cCI6MTcyMTcyMjIzOX0.XKXJeaplwlK9gfnKgey9GF7YtKsnBEbk9S9_qwZqVyo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/doctor",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"doctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post doctor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTg2MzksImV4cCI6MTcyMTcyMjIzOX0.XKXJeaplwlK9gfnKgey9GF7YtKsnBEbk9S9_qwZqVyo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namaDoctor\" : \"Dr. Jack\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/doctor",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"doctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "up doctor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTg2MzksImV4cCI6MTcyMTcyMjIzOX0.XKXJeaplwlK9gfnKgey9GF7YtKsnBEbk9S9_qwZqVyo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namaDoctor\" : \"Dr. Suratman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/doctor/3:doctorID",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"doctor",
+						"3:doctorID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del doctor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTg2MzksImV4cCI6MTcyMTcyMjIzOX0.XKXJeaplwlK9gfnKgey9GF7YtKsnBEbk9S9_qwZqVyo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/doctor/3:doctorID",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"doctor",
+						"3:doctorID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get poli",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTg2MzksImV4cCI6MTcyMTcyMjIzOX0.XKXJeaplwlK9gfnKgey9GF7YtKsnBEbk9S9_qwZqVyo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/poli",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"poli"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post poli",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTg2MzksImV4cCI6MTcyMTcyMjIzOX0.XKXJeaplwlK9gfnKgey9GF7YtKsnBEbk9S9_qwZqVyo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namaPoli\" : \"Saraf\",\r\n    \"lantai\" : 2,\r\n    \"doctorID\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/poli",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"poli"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "up poli",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTg2MzksImV4cCI6MTcyMTcyMjIzOX0.XKXJeaplwlK9gfnKgey9GF7YtKsnBEbk9S9_qwZqVyo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namaPoli\" : \"Psikologi\",\r\n    \"lantai\" : 2,\r\n    \"doctorID\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/poli/2:doctorID",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"poli",
+						"2:doctorID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del poli",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTg2MzksImV4cCI6MTcyMTcyMjIzOX0.XKXJeaplwlK9gfnKgey9GF7YtKsnBEbk9S9_qwZqVyo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namaPoli\" : \"Psikologi\",\r\n    \"lantai\" : 2,\r\n    \"doctorID\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/poli/3:doctorID",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"poli",
+						"3:doctorID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get rm",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTg2MzksImV4cCI6MTcyMTcyMjIzOX0.XKXJeaplwlK9gfnKgey9GF7YtKsnBEbk9S9_qwZqVyo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/rm",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"rm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post rm",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTg2MzksImV4cCI6MTcyMTcyMjIzOX0.XKXJeaplwlK9gfnKgey9GF7YtKsnBEbk9S9_qwZqVyo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\" : 1, \r\n    \"date\" : \"20 Juli 2024\", \r\n    \"poliID\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/rm",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"rm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del rm",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTg2MzksImV4cCI6MTcyMTcyMjIzOX0.XKXJeaplwlK9gfnKgey9GF7YtKsnBEbk9S9_qwZqVyo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/rm/2:rmID",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"rm",
+						"2:rmID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put rm Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjE3MTg2MzksImV4cCI6MTcyMTcyMjIzOX0.XKXJeaplwlK9gfnKgey9GF7YtKsnBEbk9S9_qwZqVyo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\" : 1, \r\n    \"date\" : \"20 Juli 2024\", \r\n    \"poliID\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/rm/2:rmID",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"rm",
+						"2:rmID"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mendaftar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userID\" : 1, \r\n    \"date\" : \"20 Juli 2024\", \r\n    \"poliID\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/pesan",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"pesan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transaksi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nominal\" : 500000,\r\n    \"pemesananID\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rumah-r3jribe8o-wafiqah-arts-projects.vercel.app/transaksi",
+					"protocol": "https",
+					"host": [
+						"rumah-r3jribe8o-wafiqah-arts-projects",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"transaksi"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
