@@ -1,13 +1,18 @@
-require('dotenv').config();
-const express = require('express');
 const { Sequelize } = require('sequelize');
+require('dotenv').config();  // Muat variabel lingkungan dari .env
 
 // Konfigurasi koneksi Sequelize
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    dialect: 'mysql'
-});
+const sequelize = new Sequelize(
+    process.env.DB_NAME,
+    process.env.DB_USER,
+    process.env.DB_PASSWORD,
+    {
+        host: process.env.DB_HOST,
+        port: process.env.DB_PORT,
+        dialect: process.env.DB_DIALECT,
+    }
+);
+
 // Uji koneksi
 sequelize.authenticate()
     .then(() => {
@@ -16,5 +21,6 @@ sequelize.authenticate()
     .catch(err => {
         console.error('Unable to connect to the database:', err);
     });
+
 // Ekspor instance sequelize untuk digunakan di tempat lain
 module.exports = sequelize;
